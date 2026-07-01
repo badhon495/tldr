@@ -18,3 +18,7 @@
 - একটি ইনটেন্টকে URI-তে রূপান্তর করুন:
 
 `am to-uri -a {{android.intent.action.VIEW}} -d {{tel:123}}`
+
+- এমুলেটর বা ডিভাইসে হোম অ্যাক্টিভিটি শুরু করুন:
+
+`am start -W -c android.intent.category.HOME -a android.intent.action.MAIN`

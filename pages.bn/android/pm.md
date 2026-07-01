@@ -1,24 +1,36 @@
 # pm
 
-> অ্যান্ড্রয়েড ডিভাইসে থাকা অ্যাপগুলো সম্পর্কে তথ্য দেখুন।
+> অ্যান্ড্রয়েড প্যাকেজ ম্যানেজার টুল।
 > আরও তথ্য পাবেন: <https://developer.android.com/tools/adb#pm>।
 
-- ইনস্টল করা সমস্ত অ্যাপের তালিকা দেখুন:
+- ইনস্টল করা প্যাকেজগুলোর তালিকা দেখুন:
 
 `pm list packages`
 
-- ইনস্টল করা সমস্ত সিস্টেম অ্যাপের তালিকা দেখুন:
+- নির্দিষ্ট পাথ থেকে একটি অ্যাপ ইনস্টল করুন:
 
-`pm list packages -s`
+`pm install /{{path/to/app}}.apk`
 
-- ইনস্টল করা সমস্ত থার্ড-পার্টি অ্যাপের তালিকা দেখুন:
+- ডিভাইস থেকে একটি প্যাকেজ আনইনস্টল করুন:
 
-`pm list packages -3`
+`pm uninstall {{package}}`
 
-- নির্দিষ্ট কীওয়ার্ডের সাথে মিল থাকা অ্যাপগুলোর তালিকা দেখুন:
+- একটি প্যাকেজের সমস্ত অ্যাপ ডেটা মুছুন:
 
-`pm list packages {{কীওয়ার্ড১ কীওয়ার্ড২...}}`
+`pm clear {{package}}`
 
-- নির্দিষ্ট কোনো অ্যাপের APK ফাইলের পাথ দেখুন:
+- একটি প্যাকেজ বা কম্পোনেন্ট এনেবল করুন:
 
-`pm path {{অ্যাপ}}`
+`pm enable {{package_or_class}}`
+
+- একটি প্যাকেজ বা কম্পোনেন্ট ডিজেবল করুন:
+
+`pm disable-user {{package_or_class}}`
+
+- একটি অ্যাপের জন্য পারমিশন প্রদান করুন:
+
+`pm grant {{package}} {{android.permission.CAMERA|android.permission.ACCESS_FINE_LOCATION|android.permission.READ_CONTACTS|...}}`
+
+- একটি অ্যাপের পারমিশন বাতিল করুন:
+
+`pm revoke {{package}} {{android.permission.CAMERA|android.permission.ACCESS_FINE_LOCATION|android.permission.READ_CONTACTS|...}}`

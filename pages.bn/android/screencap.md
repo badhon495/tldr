@@ -6,4 +6,16 @@
 
 - একটি স্ক্রিনশট নিন:
 
-`screencap {{ফাইল/এর/পাথ}}`
+`screencap {{path/to/image.png}}`
+
+- ফাইলের বিষয়বস্তু PNG হিসাবে `stdout`-এ প্রিন্ট করুন:
+
+`screencap -p`
+
+- একটি `adb` সংযোগের মাধ্যমে স্ক্রিনশট নিন এবং সংরক্ষণ করুন:
+
+`adb shell screencap -p > {{path/to/image.png}}`
+
+- সাহায্য প্রদর্শন করুন:
+
+`screencap -h`

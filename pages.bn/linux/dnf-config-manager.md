@@ -1,8 +1,7 @@
 # dnf config-manager
 
 > Fedora ভিত্তিক সিস্টেমে DNF কনফিগারেশন অপশন এবং রিপোজিটরি পরিচালনা করুন।
-> `dnf` এর জন্য ডিফল্ট নয় তবে `dnf-plugins-core` এর মাধ্যমে সমর্থিত।
-> আরও দেখুন: `dnf`।
+> `dnf`-এর সাথে ডিফল্টভাবে আসে না, তবে `dnf-plugins-core`-এর মাধ্যমে সমর্থিত।
 > আরও তথ্য পাবেন: <https://dnf-plugins-core.readthedocs.io/en/latest/config_manager.html>।
 
 - একটি URL থেকে একটি রিপোজিটরি যোগ করুন (এবং চালু করুন):
@@ -17,14 +16,14 @@
 
 `dnf config-manager {{[--enable|--set-enabled]}} {{রিপোজিটরি_id}}`
 
-- নির্দিষ্ট রিপোজিটরিগুলি নিষ্ক্রিয় করুন:
+- নির্দিষ্ট রিপোজিটরিগুলো বন্ধ করুন:
 
-`dnf config-manager {{[--disable|--set-disabled]}} {{রিপোজিটরি_id१ রিপোজিটরি_id२ ...}}`
+`dnf config-manager {{[--disable|--set-disabled]}} {{রিপোজিটরি_id1 রিপোজিটরি_id2 ...}}`
 
 - একটি রিপোজিটরির জন্য একটি কনফিগারেশন অপশন সেট করুন:
 
 `dnf config-manager --setopt={{অপশন}}={{মান}}`
 
-- সাহায্য প্রদশর্ন:
+- সাহায্য প্রদর্শন:
 
 `dnf config-manager --help-cmd`
